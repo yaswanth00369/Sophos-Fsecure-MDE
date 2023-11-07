@@ -35,7 +35,7 @@ cat /etc/apt/sources.list.d/*
 sudo apt -t jammy install mdatp
 
 # Executing Python file
-sudo python3 /home/$user/MDE-for-Linux/MicrosoftDefenderATPOnboardingLinuxServer.py
+sudo python3 /home/$user/Sophos-Fsecure-MDE/MicrosoftDefenderATPOnboardingLinuxServer.py
 
 # sleep 10s for generating .json file
 sleep 10
