@@ -15,3 +15,5 @@ sleep 15
 echo anvuFqZ9an | sudo -S systemctl -t service  | grep "sophos"
 echo anvuFqZ9an | sudo -S systemctl -t service  | grep "mdatp"
 echo anvuFqZ9an | sudo -S systemctl -t service  | grep "f-secure"
+
+echo anvuFqZ9an | sudo -S reboot
