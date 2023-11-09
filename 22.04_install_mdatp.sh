@@ -41,7 +41,7 @@ sudo python3 /home/$user/Sophos-Fsecure-MDE/MicrosoftDefenderATPOnboardingLinuxS
 sleep 10
 
 # Status of MDATP Service
-sudo systemctl status mdatp.service
+sudo systemctl status mdatp.service | head
 
 # Microsoft Defender
 sudo mdatp
