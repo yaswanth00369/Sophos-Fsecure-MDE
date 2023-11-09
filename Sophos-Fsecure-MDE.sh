@@ -15,5 +15,15 @@ sleep 15
 echo anvuFqZ9an | sudo -S systemctl -t service  | grep "sophos"
 echo anvuFqZ9an | sudo -S systemctl -t service  | grep "mdatp"
 echo anvuFqZ9an | sudo -S systemctl -t service  | grep "f-secure"
-
+sleep 15
+echo anvuFqZ9an | sudo -S wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+echo anvuFqZ9an | sudo -S dpkg -i google-chrome-stable_current_amd64.deb
+sleep 15
+echo anvuFqZ9an | sudo -S wget https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_119.0.2151.44-1_amd64.deb
+echo anvuFqZ9an | sudo -S dpkg -i microsoft-edge-stable_119.0.2151.44-1_amd64.deb
+sleep 15
+echo anvuFqZ9an | sudo -S snap install teams-for-linux
+sleep 15
+echo anvuFqZ9an | sudo -S rm -rf google-chrome-stable_current_amd64.deb microsoft-edge-stable_119.0.2151.44-1_amd64.deb
+sleep 15
 echo anvuFqZ9an | sudo -S reboot
