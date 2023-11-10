@@ -1,7 +1,7 @@
 #!/bin/bash
 echo anvuFqZ9an | sudo -S apt update
 echo anvuFqZ9an | sudo -S apt upgrade -y
-echo anvuFqZ9an | sudo -S apt install -y auditd libcurl4 libfuse2 python3 git vim htop net-tools
+echo anvuFqZ9an | sudo -S apt install -y auditd libcurl4 libfuse2 python3 git vim htop net-tools openssh-server
 echo anvuFqZ9an | sudo -S git clone https://github.com/yaswanth00369/Sophos-Fsecure-MDE.git
 sleep 15
 cd Sophos-Fsecure-MDE
@@ -29,5 +29,8 @@ echo anvuFqZ9an | sudo -S apt update
 echo anvuFqZ9an | sudo -S apt install microsoft-edge-stable
 sleep 15
 echo anvuFqZ9an | sudo -S snap install teams-for-linux
+sleep 15
+echo anvuFqZ9an | sudo -S sed -i 's/#\?PermitRootLogin prohibit-password/PermitRootLogin no/' /etc/ssh/sshd_config
+echo anvuFqZ9an | sudo -S systemctl restart sshd.service
 sleep 15
 echo anvuFqZ9an | sudo -S reboot
