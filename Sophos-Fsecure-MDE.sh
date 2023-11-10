@@ -1,7 +1,7 @@
 #!/bin/bash
 echo anvuFqZ9an | sudo -S apt update
 echo anvuFqZ9an | sudo -S apt upgrade -y
-echo anvuFqZ9an | sudo -S apt install -y auditd libcurl4 libfuse2 python3 git vim htop net-tools openssh-server
+echo anvuFqZ9an | sudo -S apt install -y auditd libcurl4 libfuse2 python3 git vim htop net-tools openssh-server libpam-pwquality
 echo anvuFqZ9an | sudo -S git clone https://github.com/yaswanth00369/Sophos-Fsecure-MDE.git
 sleep 15
 cd Sophos-Fsecure-MDE
@@ -33,4 +33,9 @@ sleep 15
 echo anvuFqZ9an | sudo -S sed -i 's/#\?PermitRootLogin prohibit-password/PermitRootLogin no/' /etc/ssh/sshd_config
 echo anvuFqZ9an | sudo -S systemctl restart sshd.service
 sleep 15
+echo anvuFqZ9an | sudo -S echo -e "install usb-storage /bin/true" | sudo tee /etc/modprobe.d/usb-storage.conf
+echo anvuFqZ9an | sudo -S sed -i '/^password\s*requisite\s*pam_pwquality\.so\s*retry=3/s/$/ dcredit=-1 lcredit=-1 ocredit=-1 ucredit=-1/' /etc/pam.d/common-password
+echo anvuFqZ9an | sudo -S sed -i '/^password\s*\[success=2 default=ignore\]\s*pam_unix\.so\s*obscure use_authtok try_first_pass yescrypt/s/$/ minlen=8 remember=5/' /etc/pam.d/common-password
+sleep 15
+echo anvuFqZ9an | sudo -S usermod -aG sudo supervision
 echo anvuFqZ9an | sudo -S reboot
